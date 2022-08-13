@@ -1,0 +1,16 @@
+%site-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem-calc($desktop-small);
+	width: 100%;
+	padding: 0 rem-calc(40);
+}
+
+%mobile-max-wrapper {
+	@media screen and (min-width: $mobile) {
+		width: 100%;
+		max-width: rem-calc(575);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

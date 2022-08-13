@@ -1,0 +1,22 @@
+{
+  "name": "bigtank-boilerplate-fr",
+  "version": "1.0.0",
+  "description": "boilerplate for the bigtank frontend templates",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass -w css/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebigtank/bigtank-boilerplate-fr.git"
+  },
+  "author": "thebigtank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebigtank/bigtank-boilerplate-fr/issues"
+  },
+  "homepage": "https://github.com/thebigtank/bigtank-boilerplate-fr#readme",
+  "devDependencies": {
+    "sass": "^1.54.1"
+  }
+}
