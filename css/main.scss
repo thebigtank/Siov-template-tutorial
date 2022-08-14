@@ -2,7 +2,6 @@
 @import './utils/variables';
 @import './utils/functions';
 @import './utils/mixins';
-@import './utils/partials';
 @import './utils/responsive';
 
 
@@ -18,7 +17,7 @@
 
 
 // Template Parts
-@import './template-parts/_side-menu';
+@import './template-parts/side-content';
 @import './template-parts/header';
 @import './template-parts/hero';
 @import './template-parts/footer';

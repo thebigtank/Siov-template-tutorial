@@ -8,6 +8,9 @@ html {
 	font-size: 16px;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	@media screen and (min-width: $mobile) {
+		font-size: 14px;
+	}
 }
 
 body {
@@ -35,8 +38,14 @@ img {
 	max-width: 100%;
 }
 
+.scroll-wrap {
+    height: 100%;
+    overflow: auto;
+}
+
 .main-content {
-	width: 100%;
-	max-width: 100%;
-	overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: $color-off-white;
+    margin-left: rem-calc(320);
 }

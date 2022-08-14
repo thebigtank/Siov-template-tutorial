@@ -1,14 +1,3 @@
-.site-container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(20rem, 20rem) minmax(0, 100%);
-}
-
-.main-content {
-  height: inherit;
-  background-color: #f8f8f8;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,6 +54,11 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 body {
   font-family: "Raleway", sans-serif;
@@ -91,58 +85,79 @@ img {
   max-width: 100%;
 }
 
-.main-content {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+.scroll-wrap {
+  height: 100%;
+  overflow: auto;
 }
 
-.side-menu {
-  height: inherit;
+.main-content {
+  width: 100%;
+  height: 100vh;
+  background: #f8f8f8;
+  margin-left: 20rem;
+}
+
+.side-content {
+  min-width: 20rem;
+  width: 20rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   background-color: #2f5ba8;
   color: #f8f8f8;
 }
-.side-menu .logo {
+
+.side-content {
+  padding-top: 14.25rem;
+}
+.side-content .logo {
   padding: 2.125rem 1.25rem;
   font-family: "Barlow Condensed", sans-serif;
   display: flex;
   align-items: center;
   justify-content: initial;
   gap: 0.5rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
-.side-menu .logo h2 {
+.side-content .logo h2 {
   text-transform: uppercase;
   font-size: 3.125rem;
   font-weight: 700;
   line-height: 80%;
 }
-.side-menu .logo .content {
+.side-content .logo .content {
   position: relative;
   top: 0.1875rem;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-.side-menu .logo span {
+.side-content .logo span {
   line-height: 100%;
   text-transform: capitalize;
   font-size: 0.625rem;
 }
-.side-menu .carousel {
+.side-content .carousel {
   height: 7.1875rem;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 7rem;
 }
-.side-menu .carousel__item {
+.side-content .carousel__item {
   height: inherit;
   position: relative;
 }
-.side-menu .carousel__item img {
+.side-content .carousel__item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
 }
-.side-menu .carousel__item .grp {
+.side-content .carousel__item .grp {
   position: absolute;
   left: 2.5rem;
   top: 50%;
@@ -152,12 +167,12 @@ img {
   justify-content: space-between;
   gap: 4.0625rem;
 }
-.side-menu .carousel__item .carousel__dots {
+.side-content .carousel__item .carousel__dots {
   margin-bottom: 0.5rem;
   display: flex;
   gap: 0.375rem;
 }
-.side-menu .carousel__item .carousel__dots .dot {
+.side-content .carousel__item .carousel__dots .dot {
   display: block;
   width: 0.375rem;
   height: 0.375rem;
@@ -165,30 +180,34 @@ img {
   background-color: #f8f8f8;
   opacity: 0.4;
 }
-.side-menu .carousel__item .carousel__dots .dot.active {
+.side-content .carousel__item .carousel__dots .dot.active {
   opacity: 1;
 }
-.side-menu .carousel__item--title {
+.side-content .carousel__item--title {
   font-size: 1.125rem;
   font-weight: 700;
 }
-.side-menu .carousel__item--subtitle {
+.side-content .carousel__item--subtitle {
   font-size: 0.625rem;
   text-transform: uppercase;
   opacity: 0.5;
 }
-.side-menu .carousel__item a {
+.side-content .carousel__item a {
   opacity: 0.6;
 }
-.side-menu .menu {
-  padding: 2rem 0;
+.side-content .side__nav {
+  position: relative;
+  height: 100%;
 }
-.side-menu .menu__item {
+.side-content .side__nav .side__menu {
+  padding: 1.25rem 0;
+}
+.side-content .side__nav .menu__item {
   padding: 1rem 0;
   border-left: 2px solid transparent;
   transition: all 250ms ease-in-out;
 }
-.side-menu .menu__item a {
+.side-content .side__nav .menu__item a {
   display: block;
   padding: 0 1.25rem;
   display: flex;
@@ -200,42 +219,50 @@ img {
   opacity: 0.7;
   transition: all 250ms ease-in-out;
 }
-.side-menu .menu__item a ion-icon {
+.side-content .side__nav .menu__item a ion-icon {
   font-size: 0.75rem;
 }
-.side-menu .menu__item a:hover {
+.side-content .side__nav .menu__item a:hover {
   opacity: 1;
 }
-.side-menu .menu__item:hover {
+.side-content .side__nav .menu__item:hover {
   border-left: 2px solid #3bacd9;
 }
-.side-menu .menu__item--has-submenu .sub__menu {
+.side-content .side__nav .menu__item--has-submenu .sub__menu {
   display: none;
 }
-.side-menu .menu__item.active {
+.side-content .side__nav .menu__item.active {
   border-left: 2px solid #3bacd9;
 }
-.side-menu .menu__item.active > a {
+.side-content .side__nav .menu__item.active > a {
   opacity: 1;
 }
-.side-menu .menu__item.active > a ion-icon {
+.side-content .side__nav .menu__item.active > a ion-icon {
   transform: rotate(90deg);
 }
-.side-menu .menu__item.active .sub__menu {
+.side-content .side__nav .menu__item.active .sub__menu {
   display: block;
 }
-.side-menu .menu .sub__menu {
+.side-content .side__nav .sub__menu {
   padding: 0.3125rem 0;
   margin: 0 1.5rem 0 2.75rem;
 }
-.side-menu .menu .sub__menu--item {
+.side-content .side__nav .sub__menu--item {
   margin-top: 0.875rem;
 }
-.side-menu .menu .sub__menu--item a {
+.side-content .side__nav .sub__menu--item a {
   padding: 0;
   font-size: 0.8125rem;
   font-weight: 500;
   justify-content: space-between;
+}
+.side-content .side__nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

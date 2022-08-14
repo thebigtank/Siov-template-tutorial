@@ -6,11 +6,13 @@
 	padding: 0 rem-calc(40);
 }
 
-%mobile-max-wrapper {
-	@media screen and (min-width: $mobile) {
-		width: 100%;
-		max-width: rem-calc(575);
-		margin-left: auto;
-		margin-right: auto;
-	}
+%side-content {
+    min-width: rem-calc(320);
+    width: rem-calc(320);
+    position: fixed;
+	top: 0;
+	left: 0;
+    height: 100%;
+    background-color: $color-blue-01;
+    color: $color-off-white;
 }
