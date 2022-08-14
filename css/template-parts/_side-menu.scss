@@ -1,0 +1,42 @@
+.side-menu {
+    height: inherit;
+    padding-top: rem-calc(30);
+    background-color: $color-blue-01;
+    color: $color-off-white;
+
+    .logo {
+        padding: 0 rem-calc(20);
+        font-family: $font-barlow;
+        display: flex;
+        align-items: center;
+        gap: rem-calc(8);
+        h2 {
+            text-transform: uppercase;
+            font-size: rem-calc(50);
+            font-weight: 700;
+            line-height: 80%;
+        }
+
+        .grp {
+            position: relative;
+            top: rem-calc(3);
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        span {
+            line-height: 100%;
+            text-transform: capitalize;
+            font-size: rem-calc(10);
+        }
+    }
+
+    .carousel {
+
+    }
+
+    .menu {
+
+    }
+}

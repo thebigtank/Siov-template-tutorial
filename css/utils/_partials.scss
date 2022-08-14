@@ -1,0 +1,11 @@
+.site-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, rem-calc(300)) minmax(0, 100%);
+
+}
+
+.main-content {
+    height: inherit;
+    background-color: $color-error;
+}

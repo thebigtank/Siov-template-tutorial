@@ -1,3 +1,14 @@
+.site-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 18.75rem) minmax(0, 100%);
+}
+
+.main-content {
+  height: inherit;
+  background-color: #e55039;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -83,6 +94,38 @@ img {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+}
+
+.side-menu {
+  height: inherit;
+  padding-top: 1.875rem;
+  background-color: #2f5ba8;
+  color: #f8f8f8;
+}
+.side-menu .logo {
+  padding: 0 1.25rem;
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.side-menu .logo h2 {
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 80%;
+}
+.side-menu .logo .grp {
+  position: relative;
+  top: 0.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.side-menu .logo span {
+  line-height: 100%;
+  text-transform: capitalize;
+  font-size: 0.625rem;
 }
 
 /*# sourceMappingURL=main.css.map */
