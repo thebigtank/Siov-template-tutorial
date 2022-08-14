@@ -91,6 +91,29 @@
     }
 
     .menu {
+        padding: rem-calc(40) 0;
+        &__item {
+            padding: rem-calc(16) 0;
+            opacity: 0.7;
+            border-left: 2px solid transparent;
+            transition: all 250ms ease-in-out;
+            a {
+                display: block;
+                padding: 0 rem-calc(20);
+                display: flex;
+                align-items: center;
+                gap: rem-calc(10);
+                font-size: rem-calc(16);
+                font-weight: 700;
+            }
+            ion-icon {
+                font-size: rem-calc(12);
+            }
 
+            &:hover {
+                opacity: 1;
+                border-left: 2px solid $color-blue-02;
+            }
+        }
     }
 }
