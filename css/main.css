@@ -61,6 +61,7 @@ table {
 }
 
 html {
+  font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -206,14 +207,20 @@ img {
 .side-menu .menu__item:hover {
   border-left: 2px solid #3bacd9;
 }
-.side-menu .menu__item--active {
+.side-menu .menu__item--has-submenu .sub__menu {
+  display: none;
+}
+.side-menu .menu__item.active {
   border-left: 2px solid #3bacd9;
 }
-.side-menu .menu__item--active > a {
+.side-menu .menu__item.active > a {
   opacity: 1;
 }
-.side-menu .menu__item--active > a ion-icon {
+.side-menu .menu__item.active > a ion-icon {
   transform: rotate(90deg);
+}
+.side-menu .menu__item.active .sub__menu {
+  display: block;
 }
 .side-menu .menu .sub__menu {
   padding: 0.3125rem 0;
