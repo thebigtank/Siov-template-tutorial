@@ -74,7 +74,7 @@
             }
 
             &--title {
-                font-size: rem-calc(16);
+                font-size: rem-calc(18);
                 font-weight: 700;
             }
 
@@ -94,7 +94,6 @@
         padding: rem-calc(40) 0;
         &__item {
             padding: rem-calc(16) 0;
-            opacity: 0.7;
             border-left: 2px solid transparent;
             transition: all 250ms ease-in-out;
             a {
@@ -105,14 +104,44 @@
                 gap: rem-calc(10);
                 font-size: rem-calc(16);
                 font-weight: 700;
-            }
-            ion-icon {
-                font-size: rem-calc(12);
+                opacity: 0.7;
+                transition: all 250ms ease-in-out;
+
+                ion-icon {
+                    font-size: rem-calc(12);
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
             }
 
             &:hover {
-                opacity: 1;
                 border-left: 2px solid $color-blue-02;
+            }
+
+            &--active {
+                border-left: 2px solid $color-blue-02;
+                >a {
+                    opacity: 1;
+                    ion-icon {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        .sub__menu {
+            padding: rem-calc(5) 0;
+            margin: 0 rem-calc(24) 0 rem-calc(44);
+            &--item {
+                margin-top: rem-calc(14);
+                a {
+                    padding: 0;
+                    font-size: rem-calc(13);
+                    font-weight: 500;
+                    justify-content: space-between;
+                }
             }
         }
     }

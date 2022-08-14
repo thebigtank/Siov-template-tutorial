@@ -1,7 +1,7 @@
 .site-container {
     height: 100vh;
     display: grid;
-    grid-template-columns: minmax(rem-calc(300), rem-calc(300)) minmax(0, 100%);
+    grid-template-columns: minmax(rem-calc(320), rem-calc(320)) minmax(0, 100%);
 
 }
 
@@ -9,3 +9,5 @@
     height: inherit;
     background-color: $color-off-white;
 }
+
+// zeemzfx@support
