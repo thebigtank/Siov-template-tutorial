@@ -1,11 +1,10 @@
 .side-menu {
     height: inherit;
-    padding-top: rem-calc(30);
     background-color: $color-blue-01;
     color: $color-off-white;
 
     .logo {
-        padding: 0 rem-calc(20);
+        padding: rem-calc(34) rem-calc(20);
         font-family: $font-barlow;
         display: flex;
         align-items: center;
@@ -17,7 +16,7 @@
             line-height: 80%;
         }
 
-        .grp {
+        .content {
             position: relative;
             top: rem-calc(3);
             display: flex;
@@ -33,7 +32,62 @@
     }
 
     .carousel {
+        height: rem-calc(115);
+        overflow: hidden;
+        &__item{
+            height: inherit;
+            position: relative;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                opacity: 0.3;
+            }
 
+            .grp {
+                position: absolute;
+                left: rem-calc(40);
+                top: 50%;
+                transform: translate(0, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: rem-calc(50);
+            }
+
+            .carousel__dots {
+                margin-bottom: rem-calc(8);
+                display: flex;
+                gap: rem-calc(6);
+                .dot {
+                    display: block;
+                    width: rem-calc(6);
+                    height: rem-calc(6);
+                    border-radius: 50%;
+                    background-color: $color-off-white;
+                    opacity: 0.4;
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &--title {
+                font-size: rem-calc(16);
+                font-weight: 700;
+            }
+
+            &--subtitle {
+                font-size: rem-calc(10);
+                text-transform: uppercase;
+                opacity: 0.5;
+            }
+
+            a {
+                opacity: 0.6;
+            }
+        }
     }
 
     .menu {
