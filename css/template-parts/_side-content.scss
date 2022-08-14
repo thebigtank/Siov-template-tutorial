@@ -1,13 +1,15 @@
-.side-menu {
-    height: inherit;
-    background-color: $color-blue-01;
-    color: $color-off-white;
-
+.side-content {
+    @extend %side-content;
+    padding-top: rem-calc(228);
+    
     .logo {
         padding: rem-calc(34) rem-calc(20);
         font-family: $font-barlow;
         @include setFlex(flex, center, initial);
         gap: rem-calc(8);
+        position: absolute;
+        width: 100%;
+        top: 0;
         h2 {
             text-transform: uppercase;
             font-size: rem-calc(50);
@@ -33,6 +35,9 @@
     .carousel {
         height: rem-calc(115);
         overflow: hidden;
+        position: absolute;
+        width: 100%;
+        top: rem-calc(112);
         &__item{
             height: inherit;
             position: relative;
@@ -87,9 +92,15 @@
         }
     }
 
-    .menu {
-        padding: rem-calc(32) 0;
-        &__item {
+    .side__nav {
+        position: relative;
+        height: 100%;
+
+        .side__menu {
+            padding: rem-calc(20) 0;
+        }
+
+        .menu__item {
             padding: rem-calc(16) 0;
             border-left: 2px solid transparent;
             transition: all 250ms ease-in-out;
@@ -149,6 +160,24 @@
                     justify-content: space-between;
                 }
             }
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 95%;
+            height: 40px;
+            z-index: 2;
+        }
+
+        &::before {
+            top: 0;
+            background: linear-gradient(to bottom, $color-blue-01 0%, rgba($color-blue-01, .5) 50%, transparent);
+        }
+        &::after {
+            bottom: 0;
+            background: linear-gradient(to top, $color-blue-01 0%, rgba($color-blue-01, .5) 50%, transparent);
         }
     }
 }
