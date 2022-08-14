@@ -6,8 +6,7 @@
     .logo {
         padding: rem-calc(34) rem-calc(20);
         font-family: $font-barlow;
-        display: flex;
-        align-items: center;
+        @include setFlex(flex, center, initial);
         gap: rem-calc(8);
         h2 {
             text-transform: uppercase;
@@ -49,10 +48,8 @@
                 left: rem-calc(40);
                 top: 50%;
                 transform: translate(0, -50%);
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: rem-calc(50);
+                @include setFlex(flex, center, space-between);
+                gap: rem-calc(65);
             }
 
             .carousel__dots {
@@ -91,7 +88,7 @@
     }
 
     .menu {
-        padding: rem-calc(40) 0;
+        padding: rem-calc(32) 0;
         &__item {
             padding: rem-calc(16) 0;
             border-left: 2px solid transparent;
@@ -99,8 +96,7 @@
             a {
                 display: block;
                 padding: 0 rem-calc(20);
-                display: flex;
-                align-items: center;
+                @include setFlex(flex, center, initial);
                 gap: rem-calc(10);
                 font-size: rem-calc(16);
                 font-weight: 700;

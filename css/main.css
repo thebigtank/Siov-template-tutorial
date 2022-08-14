@@ -107,6 +107,7 @@ img {
   font-family: "Barlow Condensed", sans-serif;
   display: flex;
   align-items: center;
+  justify-content: initial;
   gap: 0.5rem;
 }
 .side-menu .logo h2 {
@@ -149,7 +150,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3.125rem;
+  gap: 4.0625rem;
 }
 .side-menu .carousel__item .carousel__dots {
   margin-bottom: 0.5rem;
@@ -180,7 +181,7 @@ img {
   opacity: 0.6;
 }
 .side-menu .menu {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 .side-menu .menu__item {
   padding: 1rem 0;
@@ -192,6 +193,7 @@ img {
   padding: 0 1.25rem;
   display: flex;
   align-items: center;
+  justify-content: initial;
   gap: 0.625rem;
   font-size: 1rem;
   font-weight: 700;
