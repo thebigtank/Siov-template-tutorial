@@ -1,9 +1,9 @@
-.side-content {
+.side__content {
     @extend %side-content;
-    padding-top: rem-calc(228);
+    padding: rem-calc(228) 0 rem-calc(223) 0;
     
     .logo {
-        padding: rem-calc(34) rem-calc(20);
+        padding: rem-calc(34) rem-calc(24);
         font-family: $font-barlow;
         @include setFlex(flex, center, initial);
         gap: rem-calc(8);
@@ -106,7 +106,7 @@
             transition: all 250ms ease-in-out;
             a {
                 display: block;
-                padding: 0 rem-calc(20);
+                padding: 0 rem-calc(24);
                 @include setFlex(flex, center, initial);
                 gap: rem-calc(10);
                 font-size: rem-calc(16);
@@ -150,7 +150,7 @@
 
         .sub__menu {
             padding: rem-calc(5) 0;
-            margin: 0 rem-calc(24) 0 rem-calc(44);
+            margin: 0 rem-calc(24) 0 rem-calc(48);
             &--item {
                 margin-top: rem-calc(14);
                 a {
@@ -178,6 +178,85 @@
         &::after {
             bottom: 0;
             background: linear-gradient(to top, $color-blue-01 0%, rgba($color-blue-01, .5) 50%, transparent);
+        }
+    }
+
+    .bottom__sheet {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid rgba($color-white, .2);
+        ul {
+            @include setFlex(flex, center, space-between);
+            padding: 0 rem-calc(24);
+        }
+
+        &--menu {
+            border-bottom: 1px solid rgba($color-white, .2);
+            a {
+                display: block;
+                padding: rem-calc(20) 0;
+                text-transform: capitalize;
+                font-size: rem-calc(14);
+                font-weight: 600;
+                opacity: .6;
+                transition: all 250ms ease-in-out;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        &--copyright {
+            padding: rem-calc(24);
+            font-size: rem-calc(11);
+            font-weight: 500;
+            opacity: 0.5;
+            p {
+                text-transform: capitalize;
+                margin-bottom: rem-calc(6);
+            }
+
+            .content {
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &:last-child {
+                        margin-left: rem-calc(6);
+                        padding-left: rem-calc(12);
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: rem-calc(3px);
+                            height: rem-calc(3px);
+                            border-radius: 50%;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+        &--social-links {
+            margin-top: rem-calc(6);
+            padding-bottom: rem-calc(24);
+            ul {
+                justify-content: flex-start;
+                gap: rem-calc(22);
+            }
+
+            a {
+                font-size: rem-calc(22);
+                opacity: .3;
+                transition: all 250ms ease-in-out;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
