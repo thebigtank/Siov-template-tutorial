@@ -48,3 +48,11 @@ img {
     background: $color-off-white;
     margin-left: rem-calc(320);
 }
+
+.wrapper {
+	@extend %site-wrapper;
+}
+
+.btn {
+	@extend %site-button;
+}

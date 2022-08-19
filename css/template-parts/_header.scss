@@ -1,16 +1,9 @@
 .block.header {
     padding: rem-calc(22) 0;
     border-bottom: 2px solid rgba($color-gray, 0.5);
-    .wrapper {
-        @extend %site-wrapper;
-    }
 
     .row {
         @include setFlex(flex, center, space-between);
-    }
-
-    .col {
-
     }
 
     .breadcrumb {

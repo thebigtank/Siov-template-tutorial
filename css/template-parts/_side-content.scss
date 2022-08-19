@@ -114,8 +114,8 @@
                 opacity: 0.7;
                 transition: all 250ms ease-in-out;
 
-                ion-icon {
-                    font-size: rem-calc(12);
+                i {
+                    --ggs: .6;
                 }
 
                 &:hover {
@@ -137,9 +137,6 @@
                 border-left: 2px solid $color-blue-02;
                 >a {
                     opacity: 1;
-                    ion-icon {
-                        transform: rotate(90deg);
-                    }
                 }
 
                 .sub__menu {
