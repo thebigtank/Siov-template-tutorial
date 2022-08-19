@@ -1,8 +1,19 @@
 %site-button {
-    
+	text-transform: uppercase;
+	color: $color-blue-02;
+	border: 1px solid $color-blue-02;
+	border-radius: 25px;
+	padding: rem-calc(8) rem-calc(24);
+	font-size: rem-calc(12);
+	font-weight: 800;
+	transition: all 180ms ease-in-out;
 
-	@media screen and (min-width: $mobile) {
-        
+	&:hover {
+		background-color: $color-blue-02;
+		color: $color-off-white;
 	}
-    
+}
+
+.btn {
+	@extend %site-button;
 }

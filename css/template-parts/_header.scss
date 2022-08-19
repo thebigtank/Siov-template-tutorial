@@ -1,0 +1,45 @@
+.block.header {
+    padding: rem-calc(22) 0;
+    border-bottom: 2px solid rgba($color-gray, 0.5);
+    .wrapper {
+        @extend %site-wrapper;
+    }
+
+    .row {
+        @include setFlex(flex, center, space-between);
+    }
+
+    .col {
+
+    }
+
+    .breadcrumb {
+        @include setFlex(flex, center, space-between);
+        gap: rem-calc(16);
+
+        &__item {
+            a {
+                position: relative;
+                display: block;
+                text-transform: uppercase;
+                font-size: rem-calc(12);
+                font-weight: 700;
+                opacity: 0.4;
+                transition: all 250ms ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &:first-child {
+                a:after {
+                    content: ">";
+                    padding-left: rem-calc(16);
+                }
+            }
+        }
+    }
+
+    
+}
