@@ -246,6 +246,9 @@ img {
   visibility: hidden;
   --ggs: .6;
 }
+.side__content .side__nav .menu__item a i::after {
+  transition: 250ms;
+}
 .side__content .side__nav .menu__item a:hover {
   opacity: 1;
 }
@@ -258,6 +261,9 @@ img {
 }
 .side__content .side__nav .menu__item.active > a {
   opacity: 1;
+}
+.side__content .side__nav .menu__item.active > a i::after {
+  transform: rotate(45deg);
 }
 .side__content .side__nav .menu__item--has-submenu a i {
   visibility: visible;

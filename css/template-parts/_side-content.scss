@@ -118,6 +118,9 @@
                 i {
                     visibility: hidden;
                     --ggs: .6;
+                    &::after {
+                        transition: 250ms;
+                    }
                 }
 
                 &:hover {
@@ -134,6 +137,12 @@
                 max-height: 500px;
                 >a {
                     opacity: 1;
+
+                    i {
+                        &::after {
+                            transform: rotate(45deg);
+                        }
+                    }
                 }
             }
 
