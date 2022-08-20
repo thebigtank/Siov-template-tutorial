@@ -1,0 +1,87 @@
+.block.hero {
+    padding: rem-calc(64) 0;
+
+    .row {
+        @include setFlex(flex, center, flex-start);
+        gap: rem-calc(32);
+    }
+
+    .col {
+
+        &:last-child {
+            width: 100%;
+            padding-left: rem-calc(32);
+            border-left: 1px solid rgba($color-black, 0.1);
+        }
+    }
+
+    .date {
+        @include setFlex(flex, center, initial);
+        flex-direction: column;
+
+        span {
+            text-transform: uppercase;
+            display: block;
+            font-size: rem-calc(15);
+            font-weight: 600;
+            opacity: .5;
+            line-height: rem-calc(15);
+        }
+
+        .day {
+            font-size: rem-calc(56);
+            font-weight: 700;
+            opacity: 1;
+            color: $color-blue-02;
+            line-height: rem-calc(50);
+            margin-bottom: rem-calc(5);
+        }
+    }
+
+    .tags {
+        @include setFlex(flex, center, initial);
+        gap: rem-calc(8);
+        margin-bottom: rem-calc(18);
+
+        a {
+            display: block;
+            text-transform: uppercase;
+            font-size: rem-calc(11);
+            font-weight: 900;
+            opacity: .4;
+        }
+    }
+
+    .title {
+        font-size: rem-calc(46);
+        line-height: rem-calc(52);
+        font-weight: 800;
+        margin-bottom: rem-calc(35);
+    }
+
+    .grp {
+        @include setFlex(flex, center, space-between);
+
+        .btn {
+            padding: rem-calc(12) rem-calc(38);
+        }
+
+        .slide-arrows {
+            @include setFlex(flex, center, space-between);
+            gap: rem-calc(28);
+
+            i {
+                --ggs: 1.2;
+            }
+
+            button {
+                opacity: .2;
+                padding: 6px 10px;
+                transition: all 250ms ease-in-out;
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
