@@ -225,8 +225,10 @@ img {
   padding: 1.25rem 0;
 }
 .side__content .side__nav .menu__item {
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   border-left: 2px solid transparent;
+  max-height: 44px;
+  overflow: hidden;
   transition: all 250ms ease-in-out;
 }
 .side__content .side__nav .menu__item a {
@@ -250,17 +252,12 @@ img {
 .side__content .side__nav .menu__item:hover {
   border-left: 2px solid #3cbbee;
 }
-.side__content .side__nav .menu__item--has-submenu .sub__menu {
-  display: none;
-}
 .side__content .side__nav .menu__item.active {
   border-left: 2px solid #3cbbee;
+  max-height: 500px;
 }
 .side__content .side__nav .menu__item.active > a {
   opacity: 1;
-}
-.side__content .side__nav .menu__item.active .sub__menu {
-  display: block;
 }
 .side__content .side__nav .sub__menu {
   padding: 0.3125rem 0;

@@ -101,8 +101,10 @@
         }
 
         .menu__item {
-            padding: rem-calc(16) 0;
+            padding: rem-calc(12) 0;
             border-left: 2px solid transparent;
+            max-height: 44px;
+            overflow: hidden;
             transition: all 250ms ease-in-out;
             a {
                 display: block;
@@ -129,18 +131,23 @@
 
             &--has-submenu {
                 .sub__menu {
-                    display: none;
+                    // display: none;
+                    // visibility: hidden;
+                    // transition: 0.5s;
+                    // transform: translate3d(0, -500px, 0);
                 }
             }
 
             &.active {
                 border-left: 2px solid $color-blue-02;
+                max-height: 500px;
                 >a {
                     opacity: 1;
                 }
 
                 .sub__menu {
-                    display: block
+                    // display: block
+                    // transform: translate3d(0, 0, 0);
                 }
             }
         }
