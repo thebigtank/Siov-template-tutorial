@@ -222,10 +222,9 @@ img {
   height: 100%;
 }
 .side__content .side__nav .side__menu {
-  padding: 1.25rem 0;
+  padding: 2.5rem 0;
 }
 .side__content .side__nav .menu__item {
-  padding: 0.75rem 0;
   border-left: 2px solid transparent;
   max-height: 44px;
   overflow: hidden;
@@ -233,7 +232,7 @@ img {
 }
 .side__content .side__nav .menu__item a {
   display: block;
-  padding: 0 1.5rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: initial;
@@ -244,6 +243,7 @@ img {
   transition: all 250ms ease-in-out;
 }
 .side__content .side__nav .menu__item a i {
+  visibility: hidden;
   --ggs: .6;
 }
 .side__content .side__nav .menu__item a:hover {
@@ -259,25 +259,26 @@ img {
 .side__content .side__nav .menu__item.active > a {
   opacity: 1;
 }
-.side__content .side__nav .sub__menu {
-  padding: 0.3125rem 0;
-  margin: 0 1.5rem 0 3rem;
-}
-.side__content .side__nav .sub__menu--item {
-  margin-top: 0.875rem;
+.side__content .side__nav .menu__item--has-submenu a i {
+  visibility: visible;
 }
 .side__content .side__nav .sub__menu--item a {
-  padding: 0;
+  padding-left: 3rem;
+  padding-right: 1.5rem;
   font-size: 0.8125rem;
   font-weight: 500;
   justify-content: space-between;
+  transition: all 300ms ease-in-out;
+}
+.side__content .side__nav .sub__menu--item a:hover {
+  background-color: #1b438a;
 }
 .side__content .side__nav::before, .side__content .side__nav::after {
   content: "";
   position: absolute;
   left: 0;
   width: 95%;
-  height: 40px;
+  height: 2.5rem;
   z-index: 2;
 }
 .side__content .side__nav::before {
