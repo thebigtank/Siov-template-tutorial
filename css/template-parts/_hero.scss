@@ -10,7 +10,7 @@
 
         &:last-child {
             width: 100%;
-            padding-left: rem-calc(32);
+            padding: rem-calc(6) 0 rem-calc(6) rem-calc(32);
             border-left: 1px solid rgba($color-black, 0.1);
         }
     }
@@ -40,15 +40,39 @@
 
     .tags {
         @include setFlex(flex, center, initial);
-        gap: rem-calc(8);
+        gap: rem-calc(12);
         margin-bottom: rem-calc(18);
 
         a {
+            position: relative;
             display: block;
             text-transform: uppercase;
             font-size: rem-calc(11);
             font-weight: 900;
             opacity: .4;
+            padding-right: rem-calc(12);
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: rem-calc(3);
+                width: rem-calc(3);
+                border-radius: 50%;
+                background-color: $color-black;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+
+        // remove dot from the last child
+        li:last-child {
+            a {
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 
